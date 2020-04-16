@@ -1,6 +1,12 @@
 $(document).ready(function(){
   $(".language").click(function(){
     $(".list_lang").slideToggle(300);
-    $(".icon_lang").toggleClass("rorateLang")
+    $(".icon_lang").toggleClass("rorateLang");
+  });
+  $(".burger").click(function(){
+    $(".icon1:nth-child(1)").toggleClass("top");
+    $(".icon1:nth-child(2)").toggleClass("center");
+    $(".icon1:nth-child(3)").toggleClass("bottom");
+    $(".menu_right").slideToggle(300);
   });
 });
