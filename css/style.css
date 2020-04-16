@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Beaufort for LOL Bold";
+  src: url("fonts/12420e8c141ca7c3dff41de2d59df13e.eot");
+  /* IE9*/
+  src: url("../fonts/12420e8c141ca7c3dff41de2d59df13e.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/12420e8c141ca7c3dff41de2d59df13e.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/12420e8c141ca7c3dff41de2d59df13e.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/12420e8c141ca7c3dff41de2d59df13e.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/12420e8c141ca7c3dff41de2d59df13e.svg#Beaufort for LOL Bold") format("svg"); /* iOS 4.1-  */
+}
+body{
+  position: relative;
+  font-family: "Beaufort for LOL Bold";
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+}
+ul,li{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a{
+  text-decoration-line: none;
+}
+:root{
+  --color-menu :#696053;
+  --color-menu-active :#c6b7a0;
+  --bg-color-hover-lang:#4a3726;
+  --bg-color-active-lang:#68482c;
+  --color-border:#99664d;
+}
+/*  =========   HEADER   ========*/
+header{
+  position: relative;
+  height: 100px;
+  background-image: url('../img/bg/bg-black.jpg');
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1240px;  
+}
+.logo{
+  position: relative;
+  width: 120px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img_logo{
+  width: 100%;
+}
+.menu{
+  position: relative;
+  width: calc(100% - 220px);
+  color: var(--color-menu);
+  text-transform: uppercase;
+}
+.nav_menu{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  align-items: center;
+}
+.nav_item{
+  padding-left: 50px;
+}
+.nav_item:hover{
+  color: var(--color-menu-active);
+}
+.active{
+  color: var(--color-menu-active);
+}
+.language{
+  position: relative;
+  width: 100px;
+  color: var(--color-menu-active);
+  text-transform: uppercase;
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.language:hover .icon_lang{
+  width: 13px;
+  height: 13px;
+}
+.icon_lang{
+  width: 10px;
+  height: 10px;
+  transition-duration: 0.3s;
+}
+.icon_lang svg{
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: var(--color-menu-active);
+}
+.icon_lang svg path{
+  stroke:currentColor;
+}
+.list_lang{
+  display: none;
+  position: absolute;
+  right: 0;
+  top:100px;
+  height: 230px;
+  width: 200px;
+  background-image: url("../img/bg/bg-black.jpg");
+}
+.lang_menu{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  color: var(--color-menu-active);
+  border-top: 1px solid var(--color-border);
+}
+.lang_item{
+  line-height: 57px;
+  padding-left: 15px;
+  font-size: 12px;
+}
+.lang_item:hover{
+  background-color: var(--bg-color-hover-lang);
+}
+.active_lang{
+  background-color: var(--bg-color-active-lang);
+}
+.rorateLang{
+  transform:rotate(-180deg);
+}
