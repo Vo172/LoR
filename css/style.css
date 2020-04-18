@@ -8,12 +8,20 @@
   url("../fonts/12420e8c141ca7c3dff41de2d59df13e.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
   url("../fonts/12420e8c141ca7c3dff41de2d59df13e.svg#Beaufort for LOL Bold") format("svg");
   /* iOS 4.1-  */
+  font-family:"BeaufortforLOL-Regular";
+  src:url("../fonts/Beaufort-Regular.ttf");
+  src:url("../fonts/Beaufort-Regular.woff");
 }
 
 body {
   position: relative;
   font-family: "Beaufort for LOL Bold";
   font-weight: 200;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
@@ -28,13 +36,25 @@ a {
   text-decoration-line: none;
 }
 
+input {
+  border: none;
+  background-color: #0000;
+}
+
+input:focus {
+  outline: none;
+}
+
 :root {
   --color-menu: #696053;
   --color-menu-active: #c6b7a0;
   --bg-color-hover-lang: #4a3726;
   --bg-color-active-lang: #68482c;
   --color-border: #99664d;
-  --color-text-h2:#c49250;
+  --color-text-h2: #c49250;
+  --color-form: rgb(208, 168, 92);
+  --color-form-btn-hover:rgb(241,212,158);
+  --font-LOL :"BeaufortforLOL-Regular";
 }
 
 /*  =========   HEADER   ========*/
@@ -348,7 +368,8 @@ header {
 nav {
   position: relative;
   background-image: url("../img/heros/hero-background.jpg");
-  top:100px;
+  top: 100px;
+  padding-bottom: 100px;
 }
 
 .nav_logo {
@@ -391,54 +412,225 @@ nav {
   animation: jinx_move 2s forwards;
   z-index: 2;
 }
-@keyframes jinx_move{
-  0%{
+
+@keyframes jinx_move {
+  0% {
     left: 100px;
   }
-  100%{
+  100% {
     left: 0px;
   }
 }
+
 .jinx img {
   position: relative;
   width: 100%;
 }
+
 .yasuo {
   position: absolute;
   width: 90%;
   animation: yasuo_move 2s forwards;
   bottom: 0;
 }
-@keyframes yasuo_move{
-  0%{
+
+@keyframes yasuo_move {
+  0% {
     right: 100px;
   }
-  100%{
+  100% {
     right: 0px;
   }
 }
+
 .yasuo img {
   position: relative;
   width: 100%;
 }
-.nav_text{
+
+.nav_text {
   position: relative;
   font-family: 'Oswald', sans-serif;
   font-size: 35px;
   color: var(--color-text-h2);
   text-align: center;
-  top:-50px;
   text-transform: uppercase;
-  z-index: 3  ;
+  z-index: 3;
 }
-.nav_text{
+
+.nav_text {
   padding: 0 60px;
 }
-@media only screen and (max-width: 1024px){
-  nav{
-    top:60px;
+
+.nav_download {
+  position: relative;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.download_text {
+  color: var(--color-menu);
+  text-transform: uppercase;
+  padding: 15px 0;
+}
+
+.download_menu {
+  position: relative;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.download_item {
+  position: relative;
+  height: 100%;
+  margin: 0 5px;
+}
+
+.download_item img {
+  position: relative;
+  height: 100%;
+}
+
+.register {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 400px;
+}
+
+.register form {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background-image: url(../img/bg/bg-dark.jpg);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.register_content {
+  position: relative;
+  width: 90%;
+}
+
+.reg_email {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-top: 40px;
+}
+
+.register_content label {
+  position: relative;
+  color: var(--color-menu);
+  text-transform: uppercase;
+  font-size: 12px;
+  width: 100%;
+}
+
+.register_content input {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+}
+
+::placeholder {
+  text-transform: uppercase;
+  color: #fff;
+  padding-left: 20px;
+}
+
+.email {
+  height: 56px;
+  border: 1px solid var(--color-form);
+  margin: 10px 0;
+}
+
+.reg_dob {
+  position: relative;
+  top: 10px;
+}
+
+.input_date {
+  height: 56px;
+  border: 1px solid var(--color-form);
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.inp_dob {
+  font-family: 'Oswald', sans-serif;
+  width: 60px;
+}
+
+.rule {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 30px 0;
+}
+
+.rule_check {
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  border-color: var(--color-form);
+  margin: 0;
+}
+
+.rule_text {
+  padding-left: 10px;
+}
+
+.rule p {
+  font-family: var(--font-LOL);
+  font-size: 11px;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+}
+
+.Privacy {
+  text-decoration: solid;
+  color: #fff;
+}
+
+.btn_submit{
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btn_submit button{
+  width: 170px;
+  color: #000;
+  text-transform: uppercase;
+  font-family: 'Oswald';
+  font-weight: bold;
+  font-size: 14px;
+  background-color: var(--color-form);
+  border: none;
+}
+.btn_submit button:hover{
+  background-color: var(--color-form-btn-hover);
+}
+.btn_submit button:focus{
+  outline: none;
+}
+@media only screen and (max-width: 1024px) {
+  nav {
+    top: 60px;
   }
 }
+
 @media only screen and (max-width: 768px) {
   .nav_logo img {
     position: relative;
@@ -447,12 +639,16 @@ nav {
   .heros {
     height: 300px;
   }
-  .heros_content{
+  .heros_content {
     width: 450px;
   }
 }
+
 @media only screen and (max-width: 400px) {
-  .yasuo{
+  .yasuo {
     width: 100%;
+  }
+  .download_menu {
+    height: 26px;
   }
 }

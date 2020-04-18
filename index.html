@@ -7,6 +7,7 @@
   <title>Legend of Runeterra</title>
   <!-- Google font -->
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <!-- JQuery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
@@ -79,6 +80,53 @@
     </div>
     <div class="nav_text">
       <h2>Đăng ký trước</h2>
+    </div>
+    <div class="nav_download">
+      <h4 class="download_text">Sẽ có trên</h4>
+      <ul class="download_menu">
+        <li class="download_item">
+          <a href="#"><img src="img/icon_download/pc-version-vn.svg" /></a>
+        </li>
+        <li class="download_item">
+          <a href="#"><img src="img/icon_download/app-store-vn.svg" /></a>
+        </li>
+        <li class="download_item">
+          <a href="#"><img src="img/icon_download/google-play-vn.png" /></a>
+        </li>
+      </ul>
+    </div>
+    <div class="register">
+      <form>
+        <div class="register_content">
+          <div class="reg_email">
+            <label for="email">Địa chỉ email</label>
+            <input class="email" type="email" id="email" placeholder="Địa chỉ email" />
+          </div>
+          <div class="reg_dob">
+            <label class="text_dob">Ngày tháng năm sinh</label>
+            <div class="input_date">
+              <input aria-label="DD" type="number" data-token="DD" autocomplete="off" maxlength="2" class="inp_dob day"
+                placeholder="DD">
+              <input aria-label="MM" type="number" data-token="MM" autocomplete="off" maxlength="2"
+                class="inp_dob month" placeholder="MM">
+              <input aria-label="YY" type="number" data-token="YY" autocomplete="off" maxlength="2" class="inp_dob year"
+                placeholder="YY">
+            </div>
+
+          </div>
+          <div class="rule">
+            <input class="rule_check" type="checkbox" />
+            <div class="rule_text">
+              <p>Tôi đồng ý nhận email liên quan đến tin tức, ưu đãi và khảo sát từ Riot Games. Vui lòng đọc phần <a
+                  href="#" class="Privacy">Privacy Policy</a> để biết thêm chi tiết về việc thông tin của bạn sẽ được sử
+                dụng như thế nào.</p>
+            </div>
+          </div>
+          <div class="btn_submit">
+            <button type="submit">Đăng ký</button>
+          </div>
+        </div>
+      </form>
     </div>
   </nav>
   <script src="js/main.js"></script>
