@@ -8,9 +8,9 @@
   url("../fonts/12420e8c141ca7c3dff41de2d59df13e.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
   url("../fonts/12420e8c141ca7c3dff41de2d59df13e.svg#Beaufort for LOL Bold") format("svg");
   /* iOS 4.1-  */
-  font-family:"BeaufortforLOL-Regular";
-  src:url("../fonts/Beaufort-Regular.ttf");
-  src:url("../fonts/Beaufort-Regular.woff");
+  font-family: "BeaufortforLOL-Regular";
+  src: url("../fonts/Beaufort-Regular.ttf");
+  src: url("../fonts/Beaufort-Regular.woff");
 }
 
 body {
@@ -53,8 +53,10 @@ input:focus {
   --color-border: #99664d;
   --color-text-h2: #c49250;
   --color-form: rgb(208, 168, 92);
-  --color-form-btn-hover:rgb(241,212,158);
-  --font-LOL :"BeaufortforLOL-Regular";
+  --color-form-btn-hover: rgb(241, 212, 158);
+  --color-section1: #d5d2c9;
+  --font-LOL: "BeaufortforLOL-Regular";
+  --font-h2: "Oswald";
 }
 
 /*  =========   HEADER   ========*/
@@ -472,6 +474,7 @@ nav {
   color: var(--color-menu);
   text-transform: uppercase;
   padding: 15px 0;
+  font-family: var(--font-LOL);
 }
 
 .download_menu {
@@ -603,13 +606,14 @@ nav {
   color: #fff;
 }
 
-.btn_submit{
+.btn_submit {
   height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.btn_submit button{
+
+.btn_submit button {
   width: 170px;
   color: #000;
   text-transform: uppercase;
@@ -619,12 +623,15 @@ nav {
   background-color: var(--color-form);
   border: none;
 }
-.btn_submit button:hover{
+
+.btn_submit button:hover {
   background-color: var(--color-form-btn-hover);
 }
-.btn_submit button:focus{
+
+.btn_submit button:focus {
   outline: none;
 }
+
 @media only screen and (max-width: 1024px) {
   nav {
     top: 60px;
@@ -650,5 +657,142 @@ nav {
   }
   .download_menu {
     height: 26px;
+  }
+}
+
+/* ========   SECTION   ======== */
+
+section {
+  position: relative;
+  background-image: url("../img/bg/bg-dark.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 100px;
+}
+
+.sec_first {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.first_video {
+  width: 60%;
+  max-width: 840px;
+  height: 100%;
+  margin-top: -70px;
+}
+
+.container_iframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container_iframe img {
+  width: 100%;
+  height: auto;
+}
+
+.first_text {
+  position: relative;
+  width: 40%;
+  right: 0;
+  text-align: justify;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.first_text h2 {
+  color: var(--color-text-h2);
+  text-transform: uppercase;
+  font-family: var(--font-h2);
+  font-size: 38px;
+  margin: 6% 0 5% 0;
+}
+
+.line {
+  position: relative;
+  height: 0.5px;
+  background-color: var(--color-border);
+}
+
+.line::after {
+  content: "";
+  display: block;
+  top: 1px;
+  position: absolute;
+  height: 3px;
+  width: 5px;
+  left: 0;
+  bottom: 100%;
+  background: #99664d;
+  transform-origin: left bottom;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.line::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1px;
+  height: 3px;
+  width: 5px;
+  right: 0;
+  bottom: 100%;
+  background: #99664d;
+  transform-origin: left bottom;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+
+.first_content {
+  max-width: 320px;
+}
+
+.first_content p {
+  font-family: var(--font-LOL);
+  color: var(--color-section1);
+}
+
+@media only screen and (max-width: 1024px) {
+  section {
+    top: 60px;
+  }
+  .sec_first{
+    width: 85%;
+    flex-direction: column;
+  }
+  .first_video{
+    width: 100%;
+  }
+  .first_text{
+    width: 100%;
+  }
+  .line{
+    width: 135px;
+    margin: auto;
+  }
+  .first_content{
+    max-width: 100%;
+    text-align: center;
+  }
+  .first_content h2{
+    margin:6% 0 2% 0; 
+  }
+  .first_content p{
+    font-size: 17px;
   }
 }
