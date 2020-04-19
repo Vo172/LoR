@@ -22,4 +22,25 @@ $(document).ready(function () {
     $(".list_lang").removeClass("show_lang");
     $(".menu_right").removeClass("hide_menu");
   });
+  async function timeOut(a,b,cb){
+    return Promise((resolve, reject) => {
+      setTimeout(()=>{
+        cb(a);
+      },b)
+    })
+  }
+
+  function appearFadeInUp(section){
+    $(section).addClass("animated fadeInUp")
+  }
+  // window.onscroll = function () { scrollFunction() };
+  // function scrollFunction(){
+  //   var screen_height = $( window ).height();
+  //   var header = $("header").offset().top;
+  //   var sec_first = $(".sec_first").offset().top;
+  //   if(header > (sec_first - (screen_height/2))){
+  //     console.log(1);
+  //   }
+  //   else console.log(0)
+  // }
 });
