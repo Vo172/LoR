@@ -57,12 +57,12 @@ $(document).ready(function () {
     }
     else{
       console.log(slider.scrollLeft);
-      if(slider.scrollLeft > slider3 - h){
+      if(slider.scrollLeft > slider3 - h - slider1){
         slider.scrollLeft = slider3 - slider1;
       }
-      else if (slider.scrollLeft <= slider3 - h && slider.scrollLeft > slider2 - h)
+      else if (slider.scrollLeft <= slider3 - h -slider1 && slider.scrollLeft > slider2 - h -slider1)
         slider.scrollLeft = slider2 - slider1;
-      else if (slider.scrollLeft <= slider2 - h)
+      else if (slider.scrollLeft <= slider2 - h - slider1)
         slider.scrollLeft = 0;
     }
   });
